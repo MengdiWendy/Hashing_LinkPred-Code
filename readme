@@ -1,0 +1,25 @@
+Author: Mengdi Wang 
+This is the implement of the paper 
+
+1. How to use? (demo)
+	a. change the data direction in demo.R
+	b. load the training, testing and feature data
+	c. run the code and the code will print the AUC 
+
+2. Demo Description
+	a. Here we use a small network with 1178 nodes, the nodes are researchers and links are co-authorships between researchers. 
+	b. Training network is the co-author network built based on historical data before 2011.
+	c. Testing network is the network built based on data in 2011. (We will predict new links appear in 2011) 
+
+
+3. Function Desription
+
+3.1 W_train_P.R, W_train_nonbinary.R, W_train_P_semi.R are three functions for training linear projection W in different settings. W_train_P and W_train_nonbinary are for unsupervised learning with different H_bin and H_raw. W_train_P_semi.R is for semi-supervised setting dealing with H_bin. It also can be used in H_raw with a slightly  (see code commend).  
+
+3.2 Lij_W_objective_P_nonbinary.R and Lij_W_objective_P are two functions to caculate objection function for H_raw and H_bin
+
+3.3 R_W_P.R is to caculate the regularization term
+
+3.4 Agg_H is to caculate the simialrity between two hashing tables using the method described in the paper 
+
+If you have any questions, please email me: mew133@pitt.edu 
